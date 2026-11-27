@@ -8,8 +8,8 @@
 The repository is nearly empty for now. As it grows, keep things simple:
 - `index.html` — the home page (top level)
 - `css/` — stylesheets
-- `js/` — scripts
-- `tools/` — one HTML page per tool (planned, not created yet)
+- `js/` — scripts (`theme.js` is the light/dark toggle)
+- `tools/` — one HTML page per tool (`tool-1.html` is a placeholder)
 - `assets/` — images and other static files
 
 Update this section whenever the structure changes.
@@ -31,9 +31,9 @@ A portal where visitors try small web tools. Audience: Electrical Engineering st
 
 ### Phases
 **Phase 1 — Portal plus its first tool (current)**
-- Homepage with one tool card.
-- Voltage divider calculator: in = input voltage, R1, R2 (Ω, kΩ, MΩ); out = output voltage and divider ratio, with friendly checks for bad input.
-- Light/dark toggle, responsive layout, good contrast in both themes.
+- [x] Portal shell: homepage, shared CSS, light/dark toggle, and a placeholder "Tool 1 — coming soon" card that opens `tools/tool-1.html` and returns via "Back to all tools". Styling is simple and neutral; the visual design is chosen later.
+- [ ] Replace the placeholder with the voltage divider calculator: in = input voltage, R1, R2 (Ω, kΩ, MΩ); out = output voltage and divider ratio, with friendly checks for bad input.
+- Throughout: responsive layout and good contrast in both themes.
 
 **Phase 2 — More tools (not planned in detail yet)**
 - Add further EE tools one at a time, using the steps above.
