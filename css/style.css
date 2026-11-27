@@ -92,3 +92,27 @@ main {
 .tool-card p { margin: 0; color: var(--muted); }
 
 .back-link { display: inline-block; margin-bottom: 1rem; }
+
+/* Tool forms and results */
+.tool-form { max-width: 28rem; }
+.field { margin-bottom: 1rem; }
+.field label { display: block; margin-bottom: 0.25rem; font-weight: 600; }
+.field-row { display: flex; gap: 0.5rem; }
+
+input, select {
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+input { flex: 1; min-width: 0; }
+
+:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+.result { max-width: 28rem; margin-top: 1.5rem; padding: 1rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; }
+.result h2 { margin-top: 0; font-size: 1.1rem; }
+.message { margin: 0; color: var(--muted); }
+dt { color: var(--muted); }
+dd { margin: 0 0 0.75rem; font-size: 1.5rem; font-weight: 700; }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voltage Divider Calculator — EE Tools Portal</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="../index.html">EE Tools Portal</a>
+    <button id="theme-toggle" type="button">Switch to dark theme</button>
+  </header>
+
+  <main>
+    <a class="back-link" href="../index.html">&larr; Back to all tools</a>
+    <h1>Voltage Divider Calculator</h1>
+    <p class="intro">
+      A voltage divider is two resistors in a row (R1, then R2) that turn an input voltage
+      into a smaller output voltage, measured across R2.
+      Formula: Vout = Vin &times; R2 &divide; (R1 + R2).
+    </p>
+
+    <form id="divider-form" class="tool-form" novalidate>
+      <div class="field">
+        <label for="vin">Input voltage, Vin (volts)</label>
+        <div class="field-row">
+          <input id="vin" type="number" inputmode="decimal" step="any" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="r1">Resistor R1</label>
+        <div class="field-row">
+          <input id="r1" type="number" inputmode="decimal" step="any" min="0" autocomplete="off">
+          <select id="r1-unit" aria-label="R1 unit">
+            <option value="1">Ω</option>
+            <option value="1000" selected>kΩ</option>
+            <option value="1000000">MΩ</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="r2">Resistor R2</label>
+        <div class="field-row">
+          <input id="r2" type="number" inputmode="decimal" step="any" min="0" autocomplete="off">
+          <select id="r2-unit" aria-label="R2 unit">
+            <option value="1">Ω</option>
+            <option value="1000" selected>kΩ</option>
+            <option value="1000000">MΩ</option>
+          </select>
+        </div>
+      </div>
+    </form>
+
+    <section class="result" aria-live="polite">
+      <h2>Result</h2>
+      <p id="message" class="message"></p>
+      <dl id="outputs" hidden>
+        <dt>Output voltage, Vout</dt>
+        <dd id="vout"></dd>
+        <dt>Divider ratio (Vout &divide; Vin)</dt>
+        <dd id="ratio"></dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="../js/voltage-divider.js"></script>
+</body>
+</html>
